@@ -4,11 +4,13 @@
     $diary_id = $_GET['diary_id'];
     $story_message = $_POST['story_message'];
     $story_date = $_POST['story_date'];
+    $like = $_POST['like'];
+    $heart = $_POST['heart'];
     // SQL script
     // (Inserting Data from Database)
 
     //Insert Command for Inserting User Data
-    $createStoryData = "INSERT INTO story VALUES ('','{$diary_id}','{$story_date}','{$story_message}')";
+    $createStoryData = "INSERT INTO story VALUES ('','{$diary_id}','{$story_date}','{$story_message}','{$like}','{$heart}')";
     $resultFromStory = mysqli_query($conn, $createStoryData);
 
     //Last Inserted User data (Used for getting the last PK of the newly inserted user)

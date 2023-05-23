@@ -4,7 +4,6 @@
         FROM story";
         $result = $conn->query($fetchQuery);
 
-    require('fetch_username.php');
 
 ?>
 <!DOCTYPE html>
@@ -236,7 +235,7 @@
             <header>
             <table>
                 <tr>
-                    <th>Name</th>
+                    
                     <th>Story ID</th>
                     <th>Diary ID</th>
                     <th>Story</th>
@@ -248,7 +247,7 @@
                     
             ?>
                 <tr>
-                <td><?php echo $userDetails['user_name']?></td>
+                
                     <td><?php echo $row['story_id']; ?></td>
                     <td><?php echo $row['diary_id']; ?></td>
                     <td id="myText"><p name="limited-text"><?php echo $row['story_message']; ?></p></td>
